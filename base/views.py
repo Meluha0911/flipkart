@@ -9,3 +9,6 @@ def flipkart(r):
 
 def signup(r):
     return render(r,'registration/signup.html')
+
+
+#This change was brought by developer B
