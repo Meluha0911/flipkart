@@ -9,3 +9,5 @@ def flipkart(r):
 
 def signup(r):
     return render(r,'registration/signup.html')
+
+#welcome to the django project by sanket more
