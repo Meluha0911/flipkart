@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%block baseblock%}
+<form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+  Model Name :<input type="text" name="modelname" value="{{form.modelname}}">
+    <br>
+  Model Price:<input type="text" name="modelprice" value="{{form.modelprice}}">
+    <br>
+  Model Qnty: <input type="text" name="modelqnty" value="{{form.modelqnty}}">
+    <br>
+     <input type="submit" class="btn btn-primary success" value="Update Record">
+    </form>
+
+</div>
+{%endblock%}
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%block baseblock%}
+<div align="center" class="container">
+<H1 align="center">Laptop Details</H1>
+{% if laptop_list %}
+<table border="2" margin="auto" align="center">
+  <tr>
+    <th>ID</th>
+    <th>ModelName</th>
+    <th>ModelPrice</th>
+    <th>ModelQnty</th>
+  </tr>
+   {% for pr in laptop_list %}
+    <tr>
+    <th>{{pr.id}}</th>
+    <td>{{pr.modelname}}</td>
+    <td>{{pr.modelprice}}</td>
+    <td>{{pr.modelqnty}}</td>
+    <td><a href="/electronic/update/{{prd.id}}" class="btn btn-outline-success">Update</a></td>
+    <td><a href="p" class="btn btn-outline-success">Delete</a></td>
+  </tr>
+{% endfor %}
+</table>
+{%else%}
+<h1>No Data Found</h1>
+
+{%endif%}
+    <br>
+<a href="/electronic/laptop" class="btn btn-outline-success">Insert New Record</a>
+    </div>
+</body>
+{%endblock%}
+</html>
